@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+  <div class="vertical">
+    <div>User</div>
+    <div id="userScore" class="score">1</div>
+    <div id="userNumber" class="number">1</div>
+  </div>
+  <div><button onclick="generate()">Generate</button></div>
+  <div class="vertical">
+    <div>Super Intelligence</div>
+    <div id="siScore" class="score">1</div>
+    <div id="siNumber" class="number">1</div>
+  </div>
+  </div>
+    
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+  .container{
+  display: flex;
+  margin: auto;
+  height: 150px;
+  width: 50vw;
+  justify-content: space-around;
+  align-items: center;
+}
+body
+{
+  display: flex;
+}
+.vertical
+{
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+}
+.score
+{
+  width: 50px;
+  height: 40px;
+  background-color: green;
+  border-radius: 5px;
+}
+.number
+{
+  width: 50px;
+  background-color: yellow;
+  border-radius: 50%;
+}
