@@ -1,33 +1,22 @@
-function magicBall()
+let scoreHuman = 0;
+let scoreSi = 0;
+
+userNumber.textContent = scoreHuman;
+siNumber.textContent = scoreSi;
+
+function generate()
 {
-  const container = document.createElement('div');
+  let userScore = document.getElementById('userScore');
+  let siScore = document.getElementById('siScore');
+  let userNumber = document.getElementById('userNumber');
+  let siNumber = document.getElementById('siNumber');
   
-  const inputField = document.createElement('input');
-  inputField.className="inputField";
-  inputField.type="text";
-  inputField.id="name";
-  inputField.name="name";
-  inputField.placeholder="ask me anything";
-  container.appendChild(inputField);
-  
-    const ball = document.createElement('div');
-    ball.className = "ball";
-    
+  let newScore1 =Math.floor(Math.random() * 10);
+  let newScore2=   Math.floor(Math.random() * 10);
+  userScore.textContent = newScore1;
+  siScore.textContent = newScore2;
 
-    let button = document.createElement('button');
-    button.className = "button";
-    button.textContent = "Click me";
-    ball.onclick = function( ) {          
-  const arrayAnswers = Array("yes", "no", "maybe", "perchance");
-  let choice = Math.random() * 4;
-  alert(arrayAnswers[Math.floor(choice)])
-  inputField.value='';
-};
-    ball.appendChild(button)
-    container.appendChild(ball);
-    document.body.appendChild(container);
+  if(newScore1 > newScore2) {userNumber.textContent = ++scoreHuman}
+  else {siNumber.textContent = ++scoreSi}
+
 }
-
-
-
-magicBall()
